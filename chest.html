@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chest</title>
+    <style>
+        body {
+            height: 100vh;
+            background: #e2e2e2;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 30px;
+            width: 1000px;
+            height: 450px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 25px 25px 30px rgba(172, 163, 163, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left{
+            width: 56%;
+            background-color: #484e56;
+            margin: -30px -30px -30px -30px;
+            height: 512px;
+        }
+        .right{
+            width: 56%;
+            background-color: #ffffff;
+            margin: -30px -30px -30px -30px;
+            height: 512px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .logol{
+            margin: 15px 174px 10px 173px;
+        }
+        .logor{
+            margin: 15px 191px 10px 216px;
+            height: 45px;
+        }
+        .login{
+            width: 56%;
+            height: 300px;
+            margin-left: 95px;
+        }
+        h3{
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+        input{
+            outline: 0;
+            border-width: 0 0 0px;
+            background-color: #e2e2e2;
+            width: 300px;
+            height: 30px;
+        }
+        button{
+            width: 305px;
+            height: 40px;
+            background-color: #484e56;
+            color: white;
+            font-size: 20px;
+            border: none;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: #646464;
+            color: white;
+        }
+        .inner{
+            width: 210px;
+            height: 230px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .w{
+            width: 210px;
+            height: 230px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img class="logol" src="fitness_logo_wide.png" alt="logo">
+            <img class="login" src="chest.jpg" alt="login">
+            <p style="color: #fb5b21; font-family: 'Bauhaus 93'; font-size: 50px; margin-left: 105px;">Chest Workout</p>
+        </div>
+        <div class="right">
+            <img class="logor" src="fitness_logo_wide.png" alt="logo">
+            <div class="inner"><img src="1c.gif" alt="" class="w"></div>
+            <div class="inner"><img src="2c.gif" alt="" class="w"></div>
+            <div class="inner"><img src="3c.gif" alt="" class="w"></div>
+            <div class="inner"><img src="4c.gif" alt="" class="w"></div>
+            <div class="inner"><img src="5c.gif" alt="" class="w"></div>
+            <div class="inner"><img src="6c.gif" alt="" class="w"></div>
+        </div>
+    </div>
+</body>
+</html>
