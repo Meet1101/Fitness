@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <style>
+        body {
+            height: 100vh;
+            background: #e2e2e2;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 30px;
+            width: 1000px;
+            height: 450px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 25px 25px 30px rgba(172, 163, 163, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            width: 56%;
+            background-color: #484e56;
+            margin: -30px -30px -30px -30px;
+        }
+
+        .right {
+            width: 56%;
+            background-color: #ffffff;
+            margin: -30px -30px -30px -30px;
+        }
+
+        .logol {
+            margin: 15px 174px 10px 173px;
+        }
+
+        .logor {
+            margin: 15px 191px 10px 216px;
+        }
+
+        .login {
+            width: 500px;
+            margin: 50px 0px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+
+        input {
+            outline: 0;
+            border-width: 0 0 0px;
+            background-color: #e2e2e2;
+            width: 300px;
+            height: 30px;
+        }
+
+        button {
+            width: 305px;
+            height: 40px;
+            background-color: #484e56;
+            color: white;
+            font-size: 20px;
+            border: none;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #646464;
+            color: white;
+        }
+
+        /* .error {
+            background-color: rgb(252, 89, 89);
+        }
+
+        .noerror {
+            background-color: rgb(116, 236, 116);
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img class="logol" src="fitness_logo_wide.png" alt="logo">
+            <img class="login" src="register_poster1.avif" alt="login">
+            <!-- <img class="login" src="register.png" alt="login"> -->
+        </div>
+        <div class="right">
+            <img class="logor" src="fitness_logo_wide.png" alt="logo">
+            <u>
+                <h3>REGISTER</h3>
+            </u>
+            <center>
+                <!-- <form name="form_register" action="reg.html" onsubmit=" return checkform()">
+                    <input type="text" name="username" placeholder="    Username" onblur="check_username()"><span
+                        id="ename"></span><br><br>
+                    <input type="text" name="email" placeholder="    E-mail" onblur="check_email()"><span
+                        id="enamemail"></span><br><br>
+                    <input type="password" name="password" placeholder="    Password" onblur="check_password()"><span
+                        id="enamep1"></span><br><br>
+                    <button type="submit">REGISTER</button>
+                </form> -->
+                <form name="form_register" action="reg.html" onsubmit="return checkform()">
+                    <input type="text" name="username" placeholder="    Username" id="name"><span
+                        id="ename"></span><br><br>
+                    <input type="text" name="email" placeholder="    E-mail" id="mail"><span
+                        id="enamemail"></span><br><br>
+                    <input type="password" name="password" placeholder="    Password" id="password"><span
+                        id="enamep1"></span><br><br>
+                    <button type="submit">REGISTER</button>
+                </form>
+            </center>
+        </div>
+    </div>
+
+    <!-- <script>
+       
+        function check_username() {
+            flag = 0;
+            if (form_register.username.value == "")
+                flag = 1;
+
+            if (flag == 1) {
+                ename.innerHTML = "";
+                form_register.username.className = "error";
+                form_register.username.focus();
+                return false;
+            }
+            else {
+                ename.innerHTML = "";
+                form_register.username.className = "noerror";
+                return true;
+            }
+        }
+
+        function check_email() {
+            pemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (form_register.email.value.match(pemail) == null) {
+                form_register.email.value = "";
+                enamemail.innerHTML = "";
+                form_register.email.className = "error";
+                return false;
+            }
+            else {
+                enamemail.innerHTML = "";
+                form_register.email.className = "noerror";
+                return true;
+            }
+        }
+
+        function check_password() {
+            ppwd = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}/;
+            if (form_register.password.value.match(ppwd) == null) {
+                form_register.password.value = "";
+                enamep1.innerHTML = "";
+                form_register.password.className = "error";
+                return false;
+            }
+            else {
+                enamep1.innerHTML = "";
+                form_register.password.className = "noerror";
+                return true;
+            }
+        }
+        function check() {
+            f = 1;
+            if (!check_username()) {
+                f = 0;
+            }
+            if (!check_email) {
+                f = 0;
+            }
+            if (!check_password()) {
+                f = 0;
+            }
+            if (f == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+        form_register.username.onsubmit = function () {
+            if (check()) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+    </script> -->
+
+    <script>
+
+        function checkform() {
+
+            var x = document.getElementById('name').value;
+            //  var checkValue = isNaN(name);
+            if (!(/^[A-Za-z\s]+$/.test(x))) {
+                window.alert("Enter Letters Only");
+                return false;
+            }
+
+            localStorage.setItem('name1', x);
+            var mail = document.getElementById('mail').value;
+            var domain = mail.substring(8, mail.length);
+            var d = mail.substring(0, 2) + mail.substring(5, 8);
+            var c = mail.substring(2, 5);
+            //  var str1 = /^[0-9]{2}[a-zA-Z]{3}[0-9]{3}@nirmauni\.ac\.in$/;
+            if (domain != "@nirmauni.ac.in" || !(/^[a-zA-Z]+$/).test(c) || !(/^[0-9]+$/).test(d)) {
+                window.alert("Email must be of format ddcccddd@nirmauni.ac.in");
+                return false;
+            }
+
+            var password = document.getElementById('password').value;
+            if (!/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/\d/.test(password)) {
+                window.alert("Please Enter your Password in given form\n Minimum 8 characters\nAt least one UpperCase and LowerCase Letter\n At least one digit ");
+                return false;
+            }
+            localStorage.setItem('pass', password);
+
+            // var repass = document.getElementById('repassword').value;
+            // if ((password != repass)) {
+            //     window.alert("Password and Confirm Password Must be same");
+            //     return false;
+            // }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            height: 100vh;
+            background: #e2e2e2;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px 30px;
+            width: 1000px;
+            height: 450px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 25px 25px 30px rgba(172, 163, 163, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left{
+            width: 56%;
+            background-color: #484e56;
+            margin: -30px -30px -30px -30px;
+            height: 512px;
+        }
+        .right{
+            width: 56%;
+            background-color: #ffffff;
+            margin: -30px -30px -30px -30px;
+            height: 512px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        .logol{
+            margin: 15px 174px 10px 173px;
+        }
+        .logor{
+            margin: 15px 191px 10px 192px;
+        }
+        .login{
+            width: 500px;
+            margin: 50px 0px; 
+        }
+        h3{
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+        .i{
+            outline: 0;
+            border-width: 0 0 0px;
+            background-color: #e2e2e2;
+            width: 300px;
+            height: 30px;
+        }
+        button{
+            width: 305px;
+            height: 40px;
+            background-color: #484e56;
+            color: white;
+            font-size: 20px;
+            border: none;
+            margin-left: 55px;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: #646464;
+            color: white;
+        }
+        .n{
+            outline: 0;
+            border-width: 0 0 0px;
+            background-color: #e2e2e2;
+            height: 30px;
+            width: 190px;
+        }
+        .g{
+            width: 20px;
+        }
+        form{
+            margin-left: 85px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img class="logol" src="fitness_logo_wide.png" alt="logo">
+            <img class="login" src="register_poster.avif" alt="login">
+        </div>
+        <div class="right">
+            <img class="logor" src="fitness_logo_wide.png" alt="logo">
+            <u><h3>REGISTRATION-FORM</h3></u>
+            <form action="th.html">
+                <input class="n" type="text" placeholder="    First Name" required>&nbsp;&nbsp;<input class="n" type="text" placeholder="    Last-Name" required><br><br>
+                <b>Mobile No. </b><input class="n" placeholder="    123-123-1234" name="M.no" type="text" required><br><br>
+                <b>Gender</b>&nbsp;&nbsp;&nbsp; <input class="g" id="male" type="radio" name="Gender" required> <label for="male">Male</label> &nbsp;&nbsp;&nbsp; <input class="g" id="female" type="radio" name="Gender"> <label for="female">Female</label><br><br>
+                <input type="text" class="n"placeholder="    Height" required>&nbsp;&nbsp;<input type="text" class="n"placeholder="    Weight"><br><br>
+                <b>Want Trainer? </b> <input id="yes" type="radio" name="trainer" required><label for="yes">Yes</label>&nbsp;<input name="trainer" id="no" type="radio"><label for="no">No</label>
+                <br><br>
+                <b>What you want to do? </b> &nbsp;<select class="n" name="option" id="option" required>
+                    <option value="Bodybuilding">Bodybuilding</option>
+                    <option value="Weight Loss">Weight Loss</option>
+                    <option value="Muscle gain">Muscle gain</option>
+                </select><br><br>
+                <b>Membership start date - </b><input class="n" type="date" required><br><br>
+                <b>Membership duration</b><br>
+                <input type="radio" name="dur" required> 1 Month <br>
+                <input type="radio" name="dur" required> 3 Month <br>
+                <input type="radio" name="dur" required> 6 Month <br>
+                <input type="radio" name="dur" required> 1 Year <br>
+                <input type="radio" name="dur" required> 2 Year <br><br>
+                <b>Please indicate any pre-existing medical conditions</b><br>
+                <input type="checkbox">Diabetes <br>
+                <input type="checkbox">High Blood Pressure <br>
+                <input type="checkbox">Palpitations <br>
+                <input type="checkbox">Recent Surgery <br>
+                <input type="checkbox">Heart Attack <br>
+                <input type="checkbox">Oedema <br>
+                <input type="checkbox">Tachycardia <br>
+                <input type="checkbox">Epilepsy <br>
+                <input type="checkbox">Pneumonia <br>
+                <input type="checkbox">Heart Murmur <br>
+                <input type="checkbox">Shortness of Breath <br>
+                <input type="checkbox">Allergies <br>
+                <input type="checkbox">Broken Bones <br>
+                <input type="checkbox">Chest Pains <br><br>
+                <button>Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

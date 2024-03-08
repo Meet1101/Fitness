@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <style>
+        body {
+            height: 100vh;
+            background: #e2e2e2;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px 30px;
+            width: 1000px;
+            height: 450px;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 25px 25px 30px rgba(172, 163, 163, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left {
+            width: 56%;
+            background-color: #484e56;
+            margin: -30px -30px -30px -30px;
+        }
+
+        .right {
+            width: 56%;
+            background-color: #ffffff;
+            margin: -30px -30px -30px -30px;
+        }
+
+        .logol {
+            margin: 15px 174px 10px 173px;
+        }
+
+        .logor {
+            margin: 15px 191px 10px 216px;
+        }
+
+        .login {
+            margin: 91px 138px 50px 15px;
+            height: 300 px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 50px;
+        }
+
+        input {
+            outline: 0;
+            border-width: 0 0 0px;
+            background-color: #e2e2e2;
+            width: 300px;
+            height: 30px;
+        }
+
+        button {
+            width: 305px;
+            height: 40px;
+            background-color: #484e56;
+            color: white;
+            font-size: 20px;
+            border: none;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #646464;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <img class="logol" src="fitness_logo_wide.png" alt="logo">
+            <img class="login" src="register_poster1.avif" alt="login">
+            <!-- <img class="login" src="login.png" alt="login"> -->
+        </div>
+        <div class="right">
+            <img class="logor" src="fitness_logo_wide.png" alt="logo">
+            <u>
+                <h3>LOGIN</h3>
+            </u>
+            <center>
+                <!-- <form action="ex.html">
+                    <input type="text" placeholder="    Username"><br><br>
+                    <input type="password" placeholder="    Password"><br><br>
+                    <button>LOGIN</button>
+                </form> -->
+                <form action="ex.html" onsubmit="return login()">
+                    <input type="text" id="name" placeholder="    Username"><br><br>
+                    <input type="password" id="password" placeholder="    Password"><br><br>
+                    <button>LOGIN</button>
+                </form>
+            </center>
+
+        </div>
+    </div>
+    <script>
+
+
+        function login() {
+            name2 = document.getElementById('name').value;
+            password = document.getElementById('password').value;
+            if (localStorage.getItem('name1') != name2) {
+                window.alert("Incorrect Username");
+                return false;
+            }
+            if (localStorage.getItem('pass') != password) {
+                window.alert("Incorrect Password");
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
