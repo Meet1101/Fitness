@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="img">
+            <img class="nav_logo" src="fitness_logo_wide.png" alt="logo">
+        </div>
+        <div class="links">
+            <a href="homepage.html" class="navlinks">Home</a>
+            <a href="#" class="navlinks">About</a>
+            <a href="BMI_Calculator.html" class="navlinks" target="_blank">BMI Calculator</a>
+            <a href="#" class="navlinks">Contact</a>
+            <a href="Sign_up.html"><button class="navlinks" id="s">Sign Up</button></a>
+            <a href="Sign_in.html"><button class="navlinks" id="s">Sign In</button></a>
+        </div>
+    </div>
+    <div id="dvImage">
+        <p id="mot">
+            <b style="font-family: 'Bauhaus 93';"><span style="color: white;">BUILD</span> <span> YOUR</span> <span style="color: white;"> BODY</span> <span> STRONG</span></b>
+            <a href="Sign_up.html"><button class="navlinks" id="s1">Create New Account</button></a>
+        </p>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        var images = ["peakpx.jpg", "peakpx2.jpg", "peakpx3.jpg"];
+        $(function () {
+            var i = 0;
+            $("#dvImage").css("background-image", "url(" + images[i] + ")");
+            setInterval(function () {
+                i++;
+                if (i == images.length) {
+                    i = 0;
+                }
+                $("#dvImage").fadeOut("slow", function () {
+                    $(this).css("background-image", "url(" + images[i] + ")");
+                    $(this).fadeIn("slow");
+                });
+            }, 5000);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+.navbar{
+    background-color: white;
+    position: relative;
+    margin-left: -50vw;
+    height: 100px;
+    margin-top: -8px;
+    left: 50%;
+}
+.navlinks{
+    text-decoration: none;
+    padding: 10px 30px;
+    position: relative;
+    top: 40px;
+    color: #333333;
+}
+.navlinks:hover{
+    color: #fb5b21;
+}
+
+.nav_logo{
+    position: relative;
+    height: 90px;
+    width: 300px; 
+    margin: 1px 70px 0px 70px;
+}
+
+.img{
+    float: left;
+    width: 215px;
+}
+
+.links{
+    height: 100px;
+    float: left;
+    width: 818px;
+    margin: 0px 70px 0px 263px;
+    font-size: 22px;
+}
+
+button{
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: white;
+    border: 2px solid #fb5b21;
+}
+
+#s{
+    margin-left: 3px;
+    background-color: transparent;
+}
+
+#s:hover{
+    background-color: #fb5b21;
+    color: white;
+}
+
+#dvImage{
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 750px;
+    margin-top: -8px; 
+    left: 50%;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+}
+
+#mot{
+    margin: 0px 0px 0px 150px;
+    position: absolute;
+    top: 50%;
+    color: #fb5b21;
+}
+
+#s1{
+    color: white;
+    font-size: 20px;
+    margin-left: 120px;
+    background-color: transparent;
+}
+
+#s1:hover{
+    background-color: #fb5b21;
+    color: white;
+}
+
+.navbar>.active>a{
+    color: #fb5b21;
+}
